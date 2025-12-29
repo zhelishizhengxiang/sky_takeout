@@ -21,6 +21,9 @@ mybatis:
   configuration:
     #开启驼峰命名
     map-underscore-to-camel-case: true
+    #使用插入后生成的主键
+    use-generated-keys: true
+    key-property: id
 
 logging:
   level:

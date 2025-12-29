@@ -30,7 +30,7 @@ public class AliOssUtil {
      *
      * @param bytes 文件的字节数组形式
      * @param objectName 上传的原文件名
-     * @return
+     * @return 文件访问路径
      */
     public String upload(byte[] bytes, String objectName) {
 
@@ -39,7 +39,7 @@ public class AliOssUtil {
         //创建OSSClient实例。
         OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
 
-        //指定文件名称：项目名称/年/月/UUID.suffix
+        //设定文件名称：项目名称/年/月/UUID.suffix
         String dirName=projectPath + "/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy/MM"));
         String newFileName = UUID.randomUUID().toString()+objectName.substring(objectName.lastIndexOf("."));
         objectName = dirName + "/" + newFileName;
@@ -74,6 +74,7 @@ public class AliOssUtil {
                 .append(objectName);
 
         log.info("文件上传到:{}", stringBuilder.toString());
+
 
         return stringBuilder.toString();
     }

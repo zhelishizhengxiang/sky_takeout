@@ -32,7 +32,6 @@ public class OssConfiguration {
                 aliOssProperties.getAccessKeyId(),
                 aliOssProperties.getAccessKeySecret(),
                 aliOssProperties.getBucketName(),
-                aliOssProperties.getRegion(),
                 aliOssProperties.getProjectPath());
     }
 }
