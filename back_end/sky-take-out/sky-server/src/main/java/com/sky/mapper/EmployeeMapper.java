@@ -40,7 +40,7 @@ public interface EmployeeMapper {
 
     /**
      *
-     * 启用禁用员工账号
+     * 编辑员工信息
      * @param employee
      * */
     @AutoFill(OperationType.UPDATE)
