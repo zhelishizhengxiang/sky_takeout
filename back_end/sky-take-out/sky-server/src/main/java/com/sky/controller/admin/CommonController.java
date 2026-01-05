@@ -30,6 +30,7 @@ public class CommonController {
     @Autowired
     private AliOssUtil aliOssUtil;
 
+
     /**
      * 文件上传
      * @param file
